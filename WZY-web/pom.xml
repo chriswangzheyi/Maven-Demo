@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.wzy.demo</groupId>
+	<artifactId>WZY-web</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>WZY-web Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<!-- 设置父项目 -->
+	<parent>
+		<groupId>com.wzy.demo</groupId>
+		<artifactId>WZY</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+
+	<!-- 依赖包 -->
+	<dependencies>
+
+
+
+
+	</dependencies>
+
+	<!-- 设置属性 -->
+	<properties>
+		<tomcat.plugin.port>8091</tomcat.plugin.port>
+	</properties>
+
+
+	<build>
+		<finalName>WZY-web</finalName>
+		<plugins>
+			<plugin>
+				<!-- 同时支持导出jar -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>stream-jar-id</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>release</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
